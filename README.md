@@ -1,10 +1,10 @@
 # Amazon Managed Blockchain Workshop
 
-! [Amazon Managed Blockchain] (images / AmazonManagedBlockchain.png "Amazon Managed Blockchain")
+![Amazon Managed Blockchain](images/AmazonManagedBlockchain.png "Amazon Managed Blockchain")
 
 ## Construyendo e implementando una aplicación para Hyperledger Fabric en Amazon Managed Blockchain
 
-Se necesita un usuario con permisos para lanzar instancias de EC2, ambientes de Cloud9, creación de redes de Blockchain y lectura desde S3.
+Se necesita un usuario con acceso a la consola de AWS y permisos para lanzar instancias de EC2, ambientes de Cloud9, creación de redes de Blockchain y lectura desde S3. El taller tomará aproximadamente 3 hora en completarse y aunque se proveen todos los comandos necesarios se recomienda contar con experiencia previa con la shell de linux.
 
 Este taller construirá una red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain, implementará el chaincode, iniciará el servidor de API y finalmente se usará una aplicación de interfaz de usuario que consume los servicios de la API RESTful para interactuar con red. 
 
@@ -18,20 +18,20 @@ La aplicación de 3 capas consta de los siguientes componentes:
 
 El taller se divide en cuatro partes:
 
-1. Construir una red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain. Las instrucciones se pueden encontrar en la carpeta: [ngo-fabric] (ngo-fabric)
-2. Implementar el chaincode, o contrato inteligente, que proporciona la funcionalidad de donación y seguimiento de gastos. Las instrucciones se pueden encontrar en la carpeta: [ngo-chaincode] (ngo-chaincode)
-3. Inicio del servidor RESTful API que expone las funciones de chaincode a las aplicaciones cliente. Las instrucciones se pueden encontrar en la carpeta: [ngo-rest-api] (ngo-rest-api)
-4. Ejecutando la aplicación de interfaz de usuario. Las instrucciones se pueden encontrar en la carpeta: [ngo-ui] (ngo-ui)
+1. Construir una red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain. Las instrucciones se pueden encontrar en la carpeta: [ngo-fabric](ngo-fabric). (12 pasos)
+2. Implementar el chaincode, o contrato inteligente, que proporciona la funcionalidad de donación y seguimiento de gastos. Las instrucciones se pueden encontrar en la carpeta: [ngo-chaincode](ngo-chaincode). (6 pasos)
+3. Inicio del servidor RESTful API que expone las funciones de chaincode a las aplicaciones cliente. Las instrucciones se pueden encontrar en la carpeta: [ngo-rest-api](ngo-rest-api). (6 pasos)
+4. Ejecutando la aplicación de interfaz de usuario. Las instrucciones se pueden encontrar en la carpeta: [ngo-ui](ngo-ui). (6 pasos)
 
 ## Empezando
 
 Para construir la red, implemente el chaincode, inicie el servidor RESTful API y ejecute la aplicación, siga las instrucciones en este orden:
 
-* [Parte 1:] (ngo-fabric / README.md) Comience el taller construyendo la red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain.
-* [Parte 2:] (ngo-chaincode / README.md) Implemente el chaincode sin fines de lucro.
-* [Parte 3:] (ngo-rest-api / README.md) Ejecute el servidor API RESTful.
-* [Parte 4:] (ngo-ui / README.md) Ejecute la aplicación.
-* [Parte 5:] (nuevo miembro / README.md) Agregue un nuevo miembro a la red.
+* [Parte 1:](ngo-fabric/README.md) Comience el taller construyendo la red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain.
+* [Parte 2:](ngo-chaincode/README.md) Implemente el chaincode sin fines de lucro.
+* [Parte 3:](ngo-rest-api/README.md) Ejecute el servidor API RESTful.
+* [Parte 4:](ngo-ui/README.md) Ejecute la aplicación.
+* [Parte 5:](new-member/README.md) Agregue un nuevo miembro a la red.
 
 ## Limpiar
 
