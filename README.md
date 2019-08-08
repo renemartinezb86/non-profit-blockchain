@@ -1,46 +1,46 @@
 # Amazon Managed Blockchain Workshop
 
-![Amazon Managed Blockchain](images/AmazonManagedBlockchain.png "Amazon Managed Blockchain")
+! [Amazon Managed Blockchain] (images / AmazonManagedBlockchain.png "Amazon Managed Blockchain")
 
-## Building and deploying an application for Hyperledger Fabric on Amazon Managed Blockchain
+## Construyendo e implementando una aplicación para Hyperledger Fabric en Amazon Managed Blockchain
 
-This workshop builds a Hyperledger Fabric blockchain network using Amazon Managed Blockchain. Once the Fabric network has been created, you will deploy a 3-tier application that uses the Fabric network to track donations to a non-profit organisation, and track how those donations are spent by the non-profit. Donations 
-and spending are tracked on a Hyperledger Fabric blockchain network with both donors and non-profits 
-(NGO's) being members of the network. The 3-tier application consists of the following components:
+Se necesita un usuario con permisos para lanzar instancias de EC2, ambientes de Cloud9, creación de redes de Blockchain y lectura desde S3.
 
-* Node.js / Angular user interface application, accessing services provided by a RESTful API
-* RESTful API, running as a Node.js Express application, using the Hyperledger Fabric Client SDK to query 
-and invoke chaincode
-* Fabric Chaincode, written in Node.js, deployed to a Hyperledger Fabric network
+Este taller construirá una red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain, implementará el chaincode, iniciará el servidor de API y finalmente se usará una aplicación de interfaz de usuario que consume los servicios de la API RESTful para interactuar con red. 
 
-This workshop will build a Hyperledger Fabric blockchain network using Amazon Managed Blockchain, deploy the chaincode,
-start the RESTful API server and finally run a UI application that uses the RESTful API to interact with the Fabric
-network. The workshop is divided into four parts:
+El caso de uso es un sistema de seguimiento de donaciones y uso de los fondos de una ONG.
 
-1. Building a Hyperledger Fabric blockchain network using Amazon Managed Blockchain. Instructions can be found in the folder: [ngo-fabric](ngo-fabric)
-2. Deploying the chaincode, or smart contract, that provides the donation and spend tracking functionality. Instructions can be found in the folder: [ngo-chaincode](ngo-chaincode)
-3. Starting the RESTful API server that exposes the chaincode functions to client applications. Instructions can be found in the folder: [ngo-rest-api](ngo-rest-api)
-4. Running the User Interface application. Instructions can be found in the folder: [ngo-ui](ngo-ui)
+La aplicación de 3 capas consta de los siguientes componentes:
+1. UI en Node.js / Aplicación de interfaz de usuario angular, acceso a servicios proporcionados via API.
+2. API RESTful, que se ejecuta como una aplicación Node.js Express, utiliza el SDK del cliente Hyperledger Fabric para realizar consultas e invocar chaincode.
+3. Fabric Chaincode, escrito en Node.js, implementado en una red Hyperledger Fabric.
 
-## Getting started
 
-To build the network, deploy the chaincode, start the RESTful API server and run the application, follow the 
-README instructions in parts 1-4, in this order:
+El taller se divide en cuatro partes:
 
-* [Part 1:](ngo-fabric/README.md) Start the workshop by building the Hyperledger Fabric blockchain network using Amazon Managed Blockchain.
-* [Part 2:](ngo-chaincode/README.md) Deploy the non-profit chaincode. 
-* [Part 3:](ngo-rest-api/README.md) Run the RESTful API server. 
-* [Part 4:](ngo-ui/README.md) Run the application. 
-* [Part 5:](new-member/README.md) Add a new member to the network. 
+1. Construir una red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain. Las instrucciones se pueden encontrar en la carpeta: [ngo-fabric] (ngo-fabric)
+2. Implementar el chaincode, o contrato inteligente, que proporciona la funcionalidad de donación y seguimiento de gastos. Las instrucciones se pueden encontrar en la carpeta: [ngo-chaincode] (ngo-chaincode)
+3. Inicio del servidor RESTful API que expone las funciones de chaincode a las aplicaciones cliente. Las instrucciones se pueden encontrar en la carpeta: [ngo-rest-api] (ngo-rest-api)
+4. Ejecutando la aplicación de interfaz de usuario. Las instrucciones se pueden encontrar en la carpeta: [ngo-ui] (ngo-ui)
 
-## Cleanup
+## Empezando
 
-To clean up your resources delete the Hyperledger Fabric network managed by Amazon Managed Blockchain and the AWS CloudFormation template as follows:
+Para construir la red, implemente el chaincode, inicie el servidor RESTful API y ejecute la aplicación, siga las instrucciones en este orden:
 
-* In the AWS CloudFormation console delete the stack with the stack name `<your network>-fabric-client-node`
-* In the Amazon Managed Blockchain console delete the member for your network. This will delete the peer node, the member, and finally, the Fabric network (assuming you created only one member)
-* In the AWS Cloud9 console delete your AWS Cloud9 instance
+* [Parte 1:] (ngo-fabric / README.md) Comience el taller construyendo la red de blockchain Hyperledger Fabric usando Amazon Managed Blockchain.
+* [Parte 2:] (ngo-chaincode / README.md) Implemente el chaincode sin fines de lucro.
+* [Parte 3:] (ngo-rest-api / README.md) Ejecute el servidor API RESTful.
+* [Parte 4:] (ngo-ui / README.md) Ejecute la aplicación.
+* [Parte 5:] (nuevo miembro / README.md) Agregue un nuevo miembro a la red.
 
-## License
+## Limpiar
 
-This library is licensed under the Apache 2.0 License. 
+Para limpiar sus recursos, elimine la red Hyperledger Fabric administrada por Amazon Managed Blockchain y la plantilla AWS CloudFormation de la siguiente manera:
+
+* En la consola de AWS CloudFormation, elimine la pila con el nombre de pila `<su red> -fabric-client-node`
+* En la consola Amazon Managed Blockchain, elimine el miembro de su red. Esto eliminará el nodo par, el miembro y, finalmente, la red Fabric (suponiendo que haya creado un solo miembro)
+* En la consola de AWS Cloud9, elimine su instancia de AWS Cloud9
+
+## Licencia
+
+Esta biblioteca tiene licencia bajo la licencia Apache 2.0.
